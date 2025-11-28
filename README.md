@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # test
 sasas
 =======
