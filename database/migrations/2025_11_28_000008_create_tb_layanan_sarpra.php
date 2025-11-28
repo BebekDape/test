@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb_history_logs', function (Blueprint $table) {
-            $table->id('id_history');
+        Schema::create('tb_layanan_sarpra', function (Blueprint $table) {
+            $table->id('id_layanan');
             $table->foreignId('id_siswa')->constrained('tb_siswa', 'id_siswa')->onDelete('cascade');
-            $table->enum('tipe', ['alat', 'ruangan']);
-            $table->enum('status', ['pending', 'approved', 'rejected', 'returned']);
-            $table->foreignId('id_staff')->constrained('tb_staff', 'id_staff')->onDelete('cascade');
+            $table->enum('jenis_layanan', ['layanan1', 'layanan2']); // Sesuaikan enum value
+            $table->text('keluhan');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb_history_logs');
+        Schema::dropIfExists('tb_layanan_sarpra');
     }
 };
