@@ -13,15 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // --- Tempat manggil seeder lo ---
-        // Tinggal tambah seeder lo di array ini:
-        // Contoh:
-        // UserSeeder::class,
-        // RoleSeeder::class,
-        // ProductSeeder::class,
-
+        /**
+         * Panggil semua seeder yang lo punya di sini.
+         * Contoh:
+         * UserSeeder::class,
+         * RoleSeeder::class,
+         * ProductSeeder::class,
+         */
+        
         $this->call([
-            // Tambahkan seeder lo di sini
+            // Contoh:
+            // SiswaSeeder::class,
+            // StaffSeeder::class,
+            // KategoriSeeder::class,
+            // BarangSeeder::class,
         ]);
     }
 }
