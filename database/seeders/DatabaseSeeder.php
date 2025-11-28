@@ -8,18 +8,20 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // --- Tempat manggil seeder lo ---
+        // Tinggal tambah seeder lo di array ini:
+        // Contoh:
+        // UserSeeder::class,
+        // RoleSeeder::class,
+        // ProductSeeder::class,
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            // Tambahkan seeder lo di sini
         ]);
     }
 }
